@@ -6,6 +6,7 @@ let trinelveli_fod=[
         starrate:"4.1",
         time:"47min",
         rate:"$400 For Two",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-2.jpg",
@@ -14,6 +15,7 @@ let trinelveli_fod=[
         starrate:"4.3",
         time:"47min",
         rate:"250 For Two",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-3.jpg",
@@ -21,7 +23,8 @@ let trinelveli_fod=[
         husan:"Chettinad, South Indian Vannarpettai, Kamaraj Nagar",
         starrate:"3.7",
         time:"47min",
-        rate:"400 For Two"
+        rate:"400 For Two",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-4.jpg",
@@ -29,7 +32,8 @@ let trinelveli_fod=[
         husan:"Biryani, Barbecue Vannarpettai, Vasantha Nager",
         starrate:"3.8",
         time:"47min",
-        rate:"600 For Two"
+        rate:"600 For Two",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-5.jpg",
@@ -38,6 +42,7 @@ let trinelveli_fod=[
         starrate:"4.2",
         time:"47min",
         rate:"250",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-6.jpg",
@@ -46,6 +51,7 @@ let trinelveli_fod=[
         starrate:"3.9",
         time:"47min",
         rate:"$300",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-7.jpg",
@@ -54,6 +60,7 @@ let trinelveli_fod=[
         starrate:"4.0",
         time:"47min",
         rate:"500",
+        offers:"50% Off | Use WELCOME50",
     },
     {
         imageurl:"image/food-8.jpg",
@@ -62,6 +69,7 @@ let trinelveli_fod=[
         starrate:"4.2",
         time:"47min",
         rate:"250",
+        offers:"50% Off | Use WELCOME50",
     }
 ];
 //container Declaration
@@ -97,8 +105,15 @@ trinelveli_fod.forEach(e=>{
     fod_card.appendChild(card_rate);
     //Star rate
     let card_star=document.createElement("div");
-    card_star.innerHTML=e.starrate;
     card_rate.appendChild(card_star);
+    //star icon
+    let icon=document.createElement("i");
+    icon.classList.add("fa");
+    icon.classList.add("fa-star");
+    card_star.appendChild(icon);
+    let icon_text=document.createElement("span");
+    icon_text.innerHTML=e.starrate;
+    card_star.appendChild(icon_text);
     //Dot
     let rate_dot=document.createElement("div")
     rate_dot.innerHTML=".";
@@ -115,5 +130,15 @@ trinelveli_fod.forEach(e=>{
     let card_rs=document.createElement("div");
     card_rs.innerHTML=e.rate;
     card_rate.appendChild(card_rs);
+    let offer=document.createElement("div");
+    offer.classList.add("offer-del");
+    fod_card.appendChild(offer);
+    let icon2=document.createElement("i");
+    icon2.classList.add("fa");
+    icon2.classList.add("fa-percent");
+    offer.appendChild(icon2);
+    let offer_text=document.createElement("span");
+    offer_text.innerHTML=e.offers;
+    offer.appendChild(offer_text);
     
 })

@@ -39,3 +39,14 @@
     padding-bottom: 15px;
     border-bottom: 1px solid #80808080;
 }
+.offer-del{
+    border-bottom: 1px solid #80808080;
+    padding: 15px 0px;
+}
+.offer-del i,.offer-del span{
+    display: inline-block;
+    color: brown;
+}
+.offer-del span{
+    margin-left: 10px;
+}

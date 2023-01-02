@@ -7,6 +7,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹400 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num1",
     },
     {
         imageurl:"image/food-2.jpg",
@@ -16,6 +17,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹250 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num2",
     },
     {
         imageurl:"image/food-3.jpg",
@@ -25,6 +27,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹400 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num3",
     },
     {
         imageurl:"image/food-4.jpg",
@@ -34,6 +37,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹600 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num4",
     },
     {
         imageurl:"image/food-5.jpg",
@@ -43,6 +47,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹250 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num5",
     },
     {
         imageurl:"image/food-6.jpg",
@@ -52,6 +57,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹300 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num6",
     },
     {
         imageurl:"image/food-7.jpg",
@@ -61,6 +67,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹500 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num7",
     },
     {
         imageurl:"image/food-8.jpg",
@@ -70,6 +77,7 @@ let trinelveli_fod=[
         time:"47min",
         rate:"₹250 For Two",
         offers:"50% Off | Use WELCOME50",
+        id:"num8",
     }
 ];
 //container Declaration
@@ -141,5 +149,30 @@ trinelveli_fod.forEach(e=>{
     let offer_text=document.createElement("span");
     offer_text.innerHTML=e.offers;
     offer.appendChild(offer_text);
-    
+    //add the subract
+    let add=document.createElement("div");
+    add.classList.add("add-btn");
+    fod_card.appendChild(add);
+    let btn_add=document.createElement("button");
+    btn_add.innerHTML="+";
+    add.appendChild(btn_add);
+    let btn_text=document.createElement("span");
+    btn_text.setAttribute("id",e.id);
+    btn_text.value="1";
+    add.appendChild(btn_text);
+    let btn_sub=document.createElement("button");
+    btn_sub.innerHTML="-";
+    add.appendChild(btn_sub);
+    btn_quanty=parseInt(document.getElementById(e.id).value);
+    btn_add.addEventListener("click",()=>{
+       btn_quanty++;
+        document.getElementById(e.id).innerHTML=btn_quanty;
+    })
+    btn_sub.addEventListener("click",()=>{
+        if(btn_quanty>1)
+        {
+        btn_quanty--;
+         document.getElementById(e.id).innerHTML=btn_quanty;
+        }
+     })
 })

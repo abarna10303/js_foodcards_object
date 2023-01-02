@@ -5,7 +5,7 @@ let trinelveli_fod=[
         husan:"American, Snacks",
         starrate:"4.1",
         time:"47min",
-        rate:"$400 For Two",
+        rate:"₹400 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -14,7 +14,7 @@ let trinelveli_fod=[
         husan:"Chinese, North Indian Vannarpettai, rahmath nagar",
         starrate:"4.3",
         time:"47min",
-        rate:"250 For Two",
+        rate:"₹250 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -23,7 +23,7 @@ let trinelveli_fod=[
         husan:"Chettinad, South Indian Vannarpettai, Kamaraj Nagar",
         starrate:"3.7",
         time:"47min",
-        rate:"400 For Two",
+        rate:"₹400 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -32,7 +32,7 @@ let trinelveli_fod=[
         husan:"Biryani, Barbecue Vannarpettai, Vasantha Nager",
         starrate:"3.8",
         time:"47min",
-        rate:"600 For Two",
+        rate:"₹600 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -41,7 +41,7 @@ let trinelveli_fod=[
         husan:"Desserts, Chinese Thirunagar, Kamaraj Nagar",
         starrate:"4.2",
         time:"47min",
-        rate:"250",
+        rate:"₹250 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -50,7 +50,7 @@ let trinelveli_fod=[
         husan:"Pastas, Desserts Vannarpettai, Vannarpeai",
         starrate:"3.9",
         time:"47min",
-        rate:"$300",
+        rate:"₹300 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -59,7 +59,7 @@ let trinelveli_fod=[
         husan:"Desserts, Chinese Vannarpettai, Palayamkottai",
         starrate:"4.0",
         time:"47min",
-        rate:"500",
+        rate:"₹500 For Two",
         offers:"50% Off | Use WELCOME50",
     },
     {
@@ -68,7 +68,7 @@ let trinelveli_fod=[
         husan:"Desserts, Chinese  Thirunagar, Kamaraj Nagar",
         starrate:"4.2",
         time:"47min",
-        rate:"250",
+        rate:"₹250 For Two",
         offers:"50% Off | Use WELCOME50",
     }
 ];
@@ -105,6 +105,7 @@ trinelveli_fod.forEach(e=>{
     fod_card.appendChild(card_rate);
     //Star rate
     let card_star=document.createElement("div");
+    card_star.classList.add("icon")
     card_rate.appendChild(card_star);
     //star icon
     let icon=document.createElement("i");

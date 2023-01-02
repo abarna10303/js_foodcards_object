@@ -30,8 +30,25 @@
 .card h3,.card p,.card .star-rate,.card img{
     margin: 5px 0px;
 }
+.card p{
+    color: gray;
+    margin-bottom: 10px;
+}
 .card img{
     width: 100%;
+}
+.icon{
+    background-color: green;
+    color: white;
+    padding: 4px 7px;
+}
+.icon i{
+    font-size: 11px;
+}
+.icon span{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
 }
 .star-rate{
     display: flex;
@@ -46,6 +63,7 @@
 .offer-del i,.offer-del span{
     display: inline-block;
     color: brown;
+    font-size: 15px;
 }
 .offer-del span{
     margin-left: 10px;

@@ -171,7 +171,7 @@ trinelveli_fod.forEach(e=>{
         btn_text.innerText=btn_text.value;
     })
     btn_sub.addEventListener("click",function(){
-        if(btn_sub>0){
+        if(btn_text.innerText>0){
             --btn_text.value;
             btn_text.innerText=btn_text.value;
         }

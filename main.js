@@ -154,15 +154,30 @@ trinelveli_fod.forEach(e=>{
     add.classList.add("add-btn");
     fod_card.appendChild(add);
     let btn_add=document.createElement("button");
-    btn_add.innerHTML="+";
+    btn_add.innerText="+";
     add.appendChild(btn_add);
+
     let btn_text=document.createElement("span");
-    btn_text.setAttribute("id",e.id);
-    btn_text.value="1";
+    btn_text.innerText="0";
+    btn_text.value="0";
     add.appendChild(btn_text);
+    
     let btn_sub=document.createElement("button");
-    btn_sub.innerHTML="-";
+    btn_sub.innerText="-";
     add.appendChild(btn_sub);
+
+    btn_add.addEventListener("click",function(){
+        ++btn_text.value;
+        btn_text.innerText=btn_text.value;
+    })
+    btn_sub.addEventListener("click",function(){
+        if(btn_sub>0){
+            --btn_text.value;
+            btn_text.innerText=btn_text.value;
+        }
+    })
+
+   /* 
     btn_quanty=parseInt(document.getElementById(e.id).value);
     btn_add.addEventListener("click",()=>{
        btn_quanty++;
@@ -175,4 +190,5 @@ trinelveli_fod.forEach(e=>{
          document.getElementById(e.id).innerHTML=btn_quanty;
         }
      })
+     */
 })
